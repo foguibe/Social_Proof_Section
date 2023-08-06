@@ -1,0 +1,269 @@
+/**************************CSS RESET*********************************/
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+box-sizing: border-box;
+}
+/*
+2. Remove default margin
+*/
+* {
+margin: 0;
+}
+/*
+Typographic tweaks!
+3. Add accessible line-height
+4. Improve text rendering
+*/
+body {
+line-height: 1.5;
+-webkit-font-smoothing: antialiased;
+}
+/*
+5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+display: block;
+max-width: 100%;
+}
+/*
+6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+font: inherit;
+}
+/*
+7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+overflow-wrap: break-word;
+}
+/*
+8. Create a root stacking context
+*/
+#root, #__next {
+isolation: isolate;
+}
+
+/**************************MY STYLING*********************************/
+body {
+    font-family: 'League Spartan', sans-serif;
+    background-image: url("images/bg-pattern-top-desktop.svg"),
+    url("images/bg-pattern-bottom-desktop.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main {
+    max-width: 100%;
+    flex: 1;
+    padding: 100px 150px;
+}
+
+#description {
+    width: 500px;
+}
+
+#rating {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
+
+#description p {
+    color: hsl(303, 10%, 53%);
+    font-size: 18px;
+}
+
+#top-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+#rating > div > div {
+    display: flex;
+    gap: 7px;
+}
+
+h1 {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 700;
+    color: hsl(300, 43%, 22%); 
+}
+
+h2 {
+    font-size: 14px;
+    color: hsl(300, 43%, 22%);
+}
+
+#rating > div {
+    background-color: hsl(300, 24%, 96%);
+    display: flex;
+    gap: 30px;
+    padding: 15px;
+    width: 75%;
+    border-radius: 5px;
+}
+
+#rating img {
+    width: 15px;
+    height: 15px;
+}
+
+#report-guru {
+    align-self: center;
+}
+
+#best-tech {
+    align-self: flex-end;
+}
+
+#bottom-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#bottom-container > div {
+    width: 30%;
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 7px;
+    padding: 30px;
+}
+
+#bottom-container img {
+    border-radius: 50%;
+}
+
+#bottom-container h3, p {
+    color: hsl(0, 0%, 100%);
+}
+
+#buttom-container p {
+    font-size: 14px;
+}
+
+#bottom-container span {
+    color: hsl(333, 80%, 67%);
+    display: block;
+}
+
+.user-details {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.user-details h3 {
+    align-self: center;
+    font-size: 16px;
+}
+
+.user-details span {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+footer p {
+    color: hsl(300, 43%, 22%);
+    font-size: 12px;
+}
+
+footer {
+    text-align: center;
+}
+
+#irene {
+    position: relative;
+    top: 20px;
+}
+
+#anne {
+    position: relative;
+    top: 40px;
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+        padding: 50px;
+    }
+
+    h1 {
+        font-size: 50px;
+        line-height: 50px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        background-image: url("images/bg-pattern-top-mobile.svg"),
+        url("images/bg-pattern-bottom-mobile.svg");
+        background-repeat: no-repeat, no-repeat;
+        background-position: top left, bottom right;
+    }
+
+    main {
+        padding: 20px 0;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    #top-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    #bottom-container {
+        flex-direction: column;
+    }
+
+    #bottom-container > div {
+        width: 80%;
+        align-self: center;
+    }
+    
+    #rating > div {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .stars {
+        align-self: center;
+    }
+
+    #rating > div {
+        align-self: flex-start;
+        align-self: center;
+    }
+
+    #description {
+        width: 80%;
+        align-self: center;
+    }
+
+    #rating {
+        width: 100%;
+        align-self: center;
+    }
+
+    footer {
+        padding-top: 50px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        text-align: center;
+    }
+}
